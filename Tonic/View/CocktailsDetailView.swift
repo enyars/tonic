@@ -101,7 +101,13 @@ struct CocktailsDetailView: View {
                     
                     if let ingredients = cocktail.ingredients {
                         ForEach(ingredients) { ingredient in
-                            TextView(text: "\(ingredient.name) ( \(ingredient.measure))")
+                            if let measure = ingredient.measure {
+                                let trimmedMeasure = measure.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                                
+                                TextView(text: ingredient.name + " ( \(trimmedMeasure) )")
+                            } else {
+                                TextView(text: ingredient.name)
+                            }
                         }
                     }
                     

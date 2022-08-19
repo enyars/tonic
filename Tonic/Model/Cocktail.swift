@@ -34,7 +34,7 @@ struct Ingredient: Decodable {
     let name: String
     
     /// Ingredient measure.
-    let measure: String
+    let measure: String?
 }
 
 /// Ingredient identifiable (with name as id).
