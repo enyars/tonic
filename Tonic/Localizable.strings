@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Tonic
+*/
+
+"cocktails.title" = "Latest cocktails";
+
+"cocktails.reload.button" = "Reload the database.";
+
+"cocktails.error" = "There was an issue with the list of cocktails, please check the network connection.";
